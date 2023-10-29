@@ -1,0 +1,73 @@
+.header {
+    width:100%;
+    height: 60px;
+    position: fixed;
+    background-color: #28282B;
+    z-index:1;
+}
+h3 {
+    width: 300px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.frame {
+    width: 100%;
+    /* background-color: lightpink; */
+    position: relative;
+    top:100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.items {
+    width: 240px;
+    height: 240px;
+    border: 0.01px solid rgba(146, 144, 144, 0.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item1 {
+    background-image: url(https://img.muji.net/img/item/4550512828839_1260.jpg);
+    background-size: 100%;
+}
+.item2 {
+    background-image: url(https://img.muji.net/img/item/4550583003043_1260.jpg);
+    background-size: 100%;
+}
+.item3 {
+    background-image: url(https://img.muji.net/img/item/4550512828532_1260.jpg);
+    background-size: 100%;
+}
+.item4 {
+    background-image: url(https://img.muji.net/img/item/4550512841098_1260.jpg);
+    background-size: 100%;
+}
+.item5 {
+    background-image: url(https://img.muji.net/img/item/4550512828846_1260.jpg);
+    background-size: 100%;
+}
+.item6 {
+    background-image: url(https://img.muji.net/img/item/4550512828808_1260.jpg);
+    background-size: 100%;
+}
+.item7 {
+    background-image: url(https://img.muji.net/img/item/4550512828495_1260.jpg);
+    background-size: 100%;
+}
+.item8 {
+    background-image: url(https://img.muji.net/img/item/4550512828433_1260.jpg);
+    background-size: 100%;
+}
+.item9 {
+    background-image: url(https://img.muji.net/img/item/4550512828396_1260.jpg);
+    background-size: 100%;
+}
+.item10 {
+    background-image: url(https://img.muji.net/img/item/4550182598438_1260.jpg);
+    background-size: 100%;
+}
