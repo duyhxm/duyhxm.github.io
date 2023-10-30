@@ -1,0 +1,117 @@
+html {
+    font-size: 100%; 
+}
+.time-table{
+    width: 100vw;
+    height:100vh;
+    /* background-color: lightpink; */
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+    font-size: 2rem;
+    color: #8c131b;
+    background-color: #ffeeda;
+    width:100%;
+    height:10%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+
+.table {
+    width:100%;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+}
+
+.table__frame {
+    width: 100%;
+    height:100%;
+}
+table {
+    width: 100%;
+    height:100%;
+    border-collapse: collapse;
+}
+.col1,.time {
+    width: 5%;
+    color: #8c131b;
+    font-size:1rem;
+    box-sizing: border-box;
+    padding-right: 1%;
+    text-align: right;
+}
+.header {
+    color: #8c131b;
+    font-size: 1.2rem;
+    height: 3.984%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+.content {
+    height: 7.38584%;
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+}
+
+.col2, .col3, .col4, .col5, .col6, .col7, .col8 {
+    width: 13.57%;
+    text-align: center;
+    box-sizing: border-box;
+    border-left: 1px solid black;
+}
+
+.sub {
+    width: 13%;
+    height: 5%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 1%;
+    background-color: #f5adf3;
+    position: absolute;
+    top: 100px;
+}
+#tue.subject--english {
+    left: 18.57%;
+    top: 46.56358%;
+    height: 32.62079333%;
+}
+#thu.subject--english {
+    left: 45.71%;
+    top: 46.56358%;
+    height: 32.62079333%;
+}
+.subject--web.prac {
+    top: 18.86668%;
+    left: 32.14%;
+    height: 22.15752%;
+}
+.subject--web.study {
+    left: 32.14%;
+    top: 46.56358%;
+    height: 32.62079333%;
+}
+.subject--os {
+    top: 4.095%;
+    left: 72.85%;
+    height: 32.62079%;
+}
+.subject--algorithm.prac {
+    top: 18.86668%;
+    left: 59.28%;
+    height: 22.15752%;
+}
+.subject--algorithm.study {
+    left: 59.28%;
+    top: 46.56358%;
+    height: 32.62079333%;
+}
+.learning-time {
+    font-size: 0.9rem;
+}
