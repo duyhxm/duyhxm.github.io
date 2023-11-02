@@ -1,1 +1,34 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body {
+                margin: 0;
+                font-size: 100%;
+                width: 100vw;
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Registration Form</h3>
+        <form action="">
+            <label for="name">Name: </label>
+            <input type="text" id="name"> <br><br>
+            <label for="class">Class: </label>
+            <input type="number" min="1" max="12" id="class"> <br><br>
+            <label for="qualification">Qualification: </label>
+            <input type="text" id="qualification"> <br><br>
+            <label for="email">E-mail ID: </label>
+            <input type="email" id="email"> <br><br>
+            <label for="address">Address: </label> <br>
+            <textarea name="address" id="address" cols="30" rows="10"></textarea> <br><br>
+            <label for="photo">Upload photo: </label>
+            <input type="file" id="photo" multiple> <br><br>
+            <button id="register">Register</button>
+            <button id="clear">Clear</button>
+        </form>
+</html>
