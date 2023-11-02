@@ -1,0 +1,19 @@
+.frame {
+  width: 100%;
+  height: 100%;
+  display:flex;
+}
+.left-screen {
+  width: 50%;
+  height: 100%;
+}
+.right-screen {
+  width: 50%;
+  height: 100%;
+  background-color: powderblue;
+}
+iframe {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
