@@ -258,7 +258,10 @@ function transformEffect(id , index){
     element.style.cssText = string;
 }
 
-cardsCarousel();
+window.addEventListener('DOMContentLoaded', () => {
+    cardsCarousel();
+});
+
 function isTextOverflow(element){
     const isOverflowing = element.scrollWidth > element.clientWidth || element.scrollHeight > element.clientHeight;
     
@@ -272,11 +275,3 @@ for(let i = 0; i < cardTextArray.length; i++){
         buttonExpandArray[i].style.cssText = 'visibility: visible';
     }
 }
-
-
-
-
-
-  
-
-
