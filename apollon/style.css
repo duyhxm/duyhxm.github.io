@@ -469,8 +469,7 @@ header.change #button__hamburger > .stick{
     height: calc(var(--w-img__write_on_laptop) * 2000.51 / 2800);
     position: absolute;
     left: 62.5%;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-135%);
 }
 #img__write_on_laptop #pencil{
     animation: 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite pencil_move;
@@ -1308,5 +1307,14 @@ footer{
         --w-button-card: 34px;
         --h-button-card: 12px;
         --w-button-hamburger: 10px;    
+    }
+    #img__write_on_laptop{
+        transform: translateY(-150%);
+    }
+
+}
+@media screen and (max-width: 374px){
+    #img__write_on_laptop{
+        transform: translateY(-160%);
     }
 }
