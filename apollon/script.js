@@ -82,7 +82,9 @@ function reloadPage() {
     location.reload(true);
 }
 
-document.getElementById('img__logo--header').addEventListener('click', reloadPage);
+document.getElementById('img__logo--header').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
 
 window.addEventListener('beforeunload', function (e) {
     reloadPage();
