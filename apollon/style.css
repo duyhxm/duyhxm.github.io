@@ -1262,6 +1262,12 @@ footer{
         box-shadow:  5px 5px 10px #e6e6e6,
              -5px -5px 10px #ffffff;
     }
+    html, body {
+        overflow-x: hidden;
+    }
+    body {
+        position: relative;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
@@ -1293,9 +1299,6 @@ footer{
         --fs-button-card: 6px;
         --w-button-card: 48px;
         --h-button-card: 14px;
-    }
-    body{
-        overflow-x: hidden;
     }
 }
 @media screen and (max-width: 424px){
