@@ -1294,6 +1294,9 @@ footer{
         --w-button-card: 48px;
         --h-button-card: 14px;
     }
+    body{
+        overflow-x: hidden;
+    }
 }
 @media screen and (max-width: 424px){
     :root{
