@@ -349,3 +349,9 @@ function moveSlide(){
         }
     }
 }
+
+//test overflow-x hidden on mobile
+function disableHorizontalScroll() {
+  document.body.style.overflowX = 'hidden';
+}
+window.onload = disableHorizontalScroll;
