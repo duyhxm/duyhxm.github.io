@@ -355,3 +355,9 @@ function disableHorizontalScroll() {
   document.body.style.overflowX = 'hidden';
 }
 window.onload = disableHorizontalScroll;
+
+//test preventing auto scroll
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+});
+
