@@ -260,6 +260,7 @@ function transformEffect(id , index){
 
 window.addEventListener('DOMContentLoaded', () => {
     cardsCarousel();
+    moveSlide();
 });
 
 function isTextOverflow(element){
@@ -273,5 +274,78 @@ for(let i = 0; i < cardTextArray.length; i++){
     let lastCharater = idOfCardText[idOfCardText.length - 1];
     if (isTextOverflow(cardTextArray[i])){
         buttonExpandArray[i].style.cssText = 'visibility: visible';
+    }
+}
+
+
+
+
+// test swipe on mobile
+const letterCarousel = document.querySelector('#letter_carousel');
+function moveSlide(){
+    let cardsStack = [];
+    let cardsQueue = [];
+    let maximumClick = 3;
+    let countLeft = 3;
+    let countRight = 0;
+    let currentIndex = 0;
+    let statusArr = [{id: "#card_1", index: 0}, {id: "#card_2", index: 1}, {id: "#card_3", index: 2}, {id: "#card_4", index: 3}];
+    cardsQueue.push(cardsArray[0].id);
+    cardsQueue.push(cardsArray[1].id);
+    cardsQueue.push(cardsArray[2].id);
+    checkCount(countLeft, countRight);
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    letterCarousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    letterCarousel.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (swipeDistance > 50) {
+            if(cardsStack.length != 0 && countLeft != maximumClick){
+                countLeft++;
+                countRight--;
+                var firstIndexOfStack = cardsStack[0];
+                cardsStack.shift();
+                cardsQueue.push(firstIndexOfStack);
+                currentIndex = countLeft;
+                for(let i = 0; i < statusArr.length; i++){
+                    statusArr[i].index += 1;
+                    transformEffect(statusArr[i].id, statusArr[i].index); 
+                }
+                checkCount(countLeft, countRight);
+                leftArrow.classList.add('clicked');
+                setTimeout(() => {
+                leftArrow.classList.remove('clicked');
+                }, 200);
+            }
+            
+        } else if (swipeDistance < -50) {
+            if(cardsQueue.length != 0 && countRight != maximumClick){
+                countRight++;
+                countLeft--;
+                var firstIndexOfQueue = cardsQueue[0];
+                cardsQueue.shift();
+                cardsStack.unshift(firstIndexOfQueue);
+                currentIndex = countRight;
+                for(let i = 0; i < statusArr.length; i++){
+                    statusArr[i].index -= 1;
+                    transformEffect(statusArr[i].id, statusArr[i].index);
+                }
+                checkCount(countLeft, countRight);
+                rightArrow.classList.add('clicked');
+                setTimeout(() => {
+                rightArrow.classList.remove('clicked');
+                }, 200);
+            }
+        }
     }
 }
